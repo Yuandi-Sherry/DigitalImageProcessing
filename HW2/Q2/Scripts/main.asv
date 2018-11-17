@@ -1,0 +1,8 @@
+% 读取图像
+img = imread('sport car.pgm');
+[height, width] = size(img);
+% imshow(img);
+% 产生两个独立的、在区间[0, 255]内均匀分布的随机矩阵
+t1 = 255 * rand(height,width); 
+t2 = 255 * randn(height,width); 
+% 产生椒盐噪声图像

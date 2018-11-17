@@ -29,3 +29,4 @@ end
  end
 
 imshow(img);
+imwrite(img, 'HW2\Q1\Results\result1.jpg')
