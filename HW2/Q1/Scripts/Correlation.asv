@@ -1,0 +1,7 @@
+function result = Correlation(k, l, f, h, i, j);
+result = 0;
+for u = -1*k : k
+    for v = -1*l : l
+        result = result + f(u +,v) * h(i+u, j+v);
+    end
+end
