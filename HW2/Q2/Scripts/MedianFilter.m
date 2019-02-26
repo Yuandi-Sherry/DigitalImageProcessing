@@ -12,6 +12,6 @@ for i = 2: height -1
             end
         end
         List = sort(List);
-        result(i,j) = List(4);
+        result(i,j) = List(5);
     end
 end

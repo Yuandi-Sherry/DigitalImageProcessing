@@ -7,7 +7,6 @@ pattern = imread('wheel.png');
 [patHeight, patWidth, channels] = size(pattern);
 %新建Correlation map
 [paddingImg, CorrelationMap] = PatternDetect(img, pattern);
-imshow(CorrelationMap);
 %进行模板检测，获得模板所在图像中心位置的坐标
 [x,y] = find(CorrelationMap == max(max(CorrelationMap)));
 %在图像上圈出模板
@@ -27,6 +26,14 @@ end
     i = x+floor(patHeight/2)+1;
     img(i,j) = color;    
  end
+ 
+% 图像显示
+figure(1)
+imshow(CorrelationMap/4000)
+title('Correlation Map')
+% imwrite(CorrelationMap/4000, 'HW2\Q1\Results\CorrelationMap.jpg')
 
-imshow(img);
-imwrite(img, 'HW2\Q1\Results\result1.jpg')
+figure(2)
+imshow(img)
+title('匹配结果')
+% imwrite(img, 'HW2\Q1\Results\result.jpg')
